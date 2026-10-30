@@ -1,0 +1,59 @@
+WARNING: Disabling truststore since ssl support is missing
+Processing /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies
+  Preparing metadata (pyproject.toml): started
+  Running command Preparing metadata (pyproject.toml)
+  *** scikit-build-core 1.1.1 using CMake 4.2.1 (metadata_wheel)
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: histogram-node-study
+  Building wheel for histogram-node-study (pyproject.toml): started
+  Running command Building wheel for histogram-node-study (pyproject.toml)
+  *** scikit-build-core 1.1.1 using CMake 4.2.1 (wheel)
+  *** Configuring CMake...
+  loading initial cache file /tmp/correctionlib-node-study-1000/provider/CMakeInit.txt
+  CMake Warning (dev) at .venv/lib/python3.13/site-packages/pybind11/share/cmake/pybind11/FindPythonLibsNew.cmake:101 (message):
+    Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+    are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+    the cmake_policy command to set the policy and suppress this warning, or
+    preferably upgrade to using FindPython, either by calling it explicitly
+    before pybind11, or by setting PYBIND11_FINDPYTHON ON before pybind11.
+  Call Stack (most recent call first):
+    .venv/lib/python3.13/site-packages/pybind11/share/cmake/pybind11/pybind11Tools.cmake:44 (find_package)
+    .venv/lib/python3.13/site-packages/pybind11/share/cmake/pybind11/pybind11Common.cmake:243 (include)
+    .venv/lib/python3.13/site-packages/pybind11/share/cmake/pybind11/pybind11Config.cmake:257 (include)
+    CMakeLists.txt:5 (find_package)
+  This warning is for project developers.  Use -Wno-dev to suppress it.
+
+  -- Found PythonInterp: /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/.venv/bin/python (found suitable version "3.13.11", minimum required is "3.9")
+  -- Found PythonLibs: /cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.100/InstallArea/x86_64-el9-gcc15-opt/lib/libpython3.13.so
+  -- Performing Test HAS_FLTO_AUTO
+  -- Performing Test HAS_FLTO_AUTO - Success
+  -- Found pybind11: /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/.venv/lib/python3.13/site-packages/pybind11/include (found version "3.1.0")
+  -- Configuring done (0.4s)
+  -- Generating done (0.0s)
+  -- Build files have been written to: /tmp/correctionlib-node-study-1000/provider
+  *** Building project with Unix Makefiles...
+  [  8%] Building CXX object CMakeFiles/_json_numbers.dir/src/json_numbers.cc.o
+  [ 16%] Building CXX object CMakeFiles/histogram_nodes.dir/src/registry.cc.o
+  [ 25%] Building CXX object CMakeFiles/histogram_nodes.dir/src/table.cc.o
+  [ 33%] Linking CXX shared module _json_numbers.cpython-313-x86_64-linux-gnu.so
+  [ 41%] Building CXX object CMakeFiles/histogram_nodes.dir/src/nodes/arithmetic.cc.o
+  [ 41%] Built target _json_numbers
+  [ 50%] Building CXX object CMakeFiles/histogram_nodes.dir/src/nodes/binary.cc.o
+  [ 58%] Building CXX object CMakeFiles/histogram_nodes.dir/src/nodes/float32_arithmetic.cc.o
+  [ 66%] Building CXX object CMakeFiles/histogram_nodes.dir/src/nodes/float32_unrolled.cc.o
+  [ 75%] Building CXX object CMakeFiles/histogram_nodes.dir/src/nodes/linear.cc.o
+  [ 83%] Building CXX object CMakeFiles/histogram_nodes.dir/src/nodes/tree.cc.o
+  [ 91%] Building CXX object CMakeFiles/histogram_nodes.dir/src/nodes/unrolled.cc.o
+  [100%] Linking CXX shared library libhistogram_nodes.so
+  [100%] Built target histogram_nodes
+  *** Installing project into wheel...
+  -- Install configuration: "Release"
+  -- Installing: /tmp/tmp8uza6gl3/wheel/platlib/histogram_nodes/_json_numbers.cpython-313-x86_64-linux-gnu.so
+  -- Installing: /tmp/tmp8uza6gl3/wheel/platlib/histogram_nodes/libhistogram_nodes.so
+  -- Set non-toolchain portion of runtime path of "/tmp/tmp8uza6gl3/wheel/platlib/histogram_nodes/libhistogram_nodes.so" to "$ORIGIN/../correctionlib/lib"
+  *** Making wheel...
+  *** Created histogram_node_study-0.1.0-cp313-cp313-linux_x86_64.whl
+  Building wheel for histogram-node-study (pyproject.toml): finished with status 'done'
+  Created wheel for histogram-node-study: filename=histogram_node_study-0.1.0-cp313-cp313-linux_x86_64.whl size=141561 sha256=6870f32564f2284480e08b4fc13e8568f7a261c8fbfd6bc856ab39c31c47b384
+  Stored in directory: /tmp/pip-ephem-wheel-cache-awt94bdz/wheels/ba/c1/24/919a101ac8f5db31cdcbb75510f39391dc7babc0033dcf047d
+Successfully built histogram-node-study

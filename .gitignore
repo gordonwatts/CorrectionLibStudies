@@ -1,0 +1,11 @@
+.venv/
+.build/
+_deps/
+dist/
+__pycache__/
+.pytest_cache/
+*.egg-info/
+*.so
+*.pyc
+.asetup.save
+bootstrap.log

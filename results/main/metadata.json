@@ -1,0 +1,38 @@
+{
+  "seed": 20261029,
+  "cpu_affinity": [
+    0
+  ],
+  "retained_rounds": 7,
+  "discarded_warm_rounds": 1,
+  "target_round_ms": 3,
+  "sizes": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    1000,
+    10000,
+    100000
+  ],
+  "operation": "tuple(c.evaluate(*coords) * coords[0] for each independent output)",
+  "units": "nanoseconds per complete Python operation, all outputs",
+  "thread_limits": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "build_provenance_sha256": "144c0bbf2e058c6b09630613b25cebdf7d4e55e5183cf766bfa10db5ebb78617"
+}

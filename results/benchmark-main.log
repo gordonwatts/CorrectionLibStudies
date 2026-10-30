@@ -1,0 +1,11 @@
+completed fixed64, outputs=1, float64, array
+completed uneven64, outputs=1, float64, array
+completed fixed20x20, outputs=1, float64, array
+completed uneven20x20, outputs=1, float64, array
+completed fixed20x20, outputs=16, float64, array
+completed fixed20x20, outputs=1, float32, array
+completed fixed64, outputs=1, float64, scalar
+completed uneven64, outputs=1, float64, scalar
+completed fixed20x20, outputs=1, float64, scalar
+completed uneven20x20, outputs=1, float64, scalar
+{"status": "passed", "rows": 944, "round_records": 7552, "output_comparisons_before_and_after": 37341760, "elapsed_seconds": 30.697007656097412}

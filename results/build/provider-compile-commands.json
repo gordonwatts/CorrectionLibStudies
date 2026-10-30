@@ -1,0 +1,62 @@
+[
+{
+  "directory": "/tmp/correctionlib-node-study-1000/provider",
+  "command": "/cvmfs/sft.cern.ch/lcg/releases/gcc/15.2.0-35657/x86_64-el9/bin/g++ -D_json_numbers_EXPORTS -isystem /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/rapidjson/include -isystem /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/.venv/lib/python3.13/site-packages/pybind11/include -isystem /cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.100/InstallArea/x86_64-el9-gcc15-opt/include/python3.13 -O3 -DNDEBUG -fPIC -fvisibility=hidden -ffp-contract=off -flto=auto -fno-fat-lto-objects -o CMakeFiles/_json_numbers.dir/src/json_numbers.cc.o -c /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/src/json_numbers.cc",
+  "file": "/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/src/json_numbers.cc",
+  "output": "CMakeFiles/_json_numbers.dir/src/json_numbers.cc.o"
+},
+{
+  "directory": "/tmp/correctionlib-node-study-1000/provider",
+  "command": "/cvmfs/sft.cern.ch/lcg/releases/gcc/15.2.0-35657/x86_64-el9/bin/g++ -Dhistogram_nodes_EXPORTS -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/src -isystem /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/rapidjson/include -isystem /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/.venv/lib/python3.13/site-packages/correctionlib/include -O3 -DNDEBUG -fPIC -O3 -march=native -ffp-contract=off -Wall -Wextra -o CMakeFiles/histogram_nodes.dir/src/registry.cc.o -c /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/src/registry.cc",
+  "file": "/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/src/registry.cc",
+  "output": "CMakeFiles/histogram_nodes.dir/src/registry.cc.o"
+},
+{
+  "directory": "/tmp/correctionlib-node-study-1000/provider",
+  "command": "/cvmfs/sft.cern.ch/lcg/releases/gcc/15.2.0-35657/x86_64-el9/bin/g++ -Dhistogram_nodes_EXPORTS -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/src -isystem /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/rapidjson/include -isystem /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/.venv/lib/python3.13/site-packages/correctionlib/include -O3 -DNDEBUG -fPIC -O3 -march=native -ffp-contract=off -Wall -Wextra -o CMakeFiles/histogram_nodes.dir/src/table.cc.o -c /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/src/table.cc",
+  "file": "/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/src/table.cc",
+  "output": "CMakeFiles/histogram_nodes.dir/src/table.cc.o"
+},
+{
+  "directory": "/tmp/correctionlib-node-study-1000/provider",
+  "command": "/cvmfs/sft.cern.ch/lcg/releases/gcc/15.2.0-35657/x86_64-el9/bin/g++ -Dhistogram_nodes_EXPORTS -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/src -isystem /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/rapidjson/include -isystem /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/.venv/lib/python3.13/site-packages/correctionlib/include -O3 -DNDEBUG -fPIC -O3 -march=native -ffp-contract=off -Wall -Wextra -o CMakeFiles/histogram_nodes.dir/src/nodes/arithmetic.cc.o -c /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/src/nodes/arithmetic.cc",
+  "file": "/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/src/nodes/arithmetic.cc",
+  "output": "CMakeFiles/histogram_nodes.dir/src/nodes/arithmetic.cc.o"
+},
+{
+  "directory": "/tmp/correctionlib-node-study-1000/provider",
+  "command": "/cvmfs/sft.cern.ch/lcg/releases/gcc/15.2.0-35657/x86_64-el9/bin/g++ -Dhistogram_nodes_EXPORTS -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/src -isystem /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/rapidjson/include -isystem /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/.venv/lib/python3.13/site-packages/correctionlib/include -O3 -DNDEBUG -fPIC -O3 -march=native -ffp-contract=off -Wall -Wextra -o CMakeFiles/histogram_nodes.dir/src/nodes/binary.cc.o -c /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/src/nodes/binary.cc",
+  "file": "/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/src/nodes/binary.cc",
+  "output": "CMakeFiles/histogram_nodes.dir/src/nodes/binary.cc.o"
+},
+{
+  "directory": "/tmp/correctionlib-node-study-1000/provider",
+  "command": "/cvmfs/sft.cern.ch/lcg/releases/gcc/15.2.0-35657/x86_64-el9/bin/g++ -Dhistogram_nodes_EXPORTS -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/src -isystem /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/rapidjson/include -isystem /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/.venv/lib/python3.13/site-packages/correctionlib/include -O3 -DNDEBUG -fPIC -O3 -march=native -ffp-contract=off -Wall -Wextra -o CMakeFiles/histogram_nodes.dir/src/nodes/float32_arithmetic.cc.o -c /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/src/nodes/float32_arithmetic.cc",
+  "file": "/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/src/nodes/float32_arithmetic.cc",
+  "output": "CMakeFiles/histogram_nodes.dir/src/nodes/float32_arithmetic.cc.o"
+},
+{
+  "directory": "/tmp/correctionlib-node-study-1000/provider",
+  "command": "/cvmfs/sft.cern.ch/lcg/releases/gcc/15.2.0-35657/x86_64-el9/bin/g++ -Dhistogram_nodes_EXPORTS -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/src -isystem /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/rapidjson/include -isystem /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/.venv/lib/python3.13/site-packages/correctionlib/include -O3 -DNDEBUG -fPIC -O3 -march=native -ffp-contract=off -Wall -Wextra -o CMakeFiles/histogram_nodes.dir/src/nodes/float32_unrolled.cc.o -c /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/src/nodes/float32_unrolled.cc",
+  "file": "/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/src/nodes/float32_unrolled.cc",
+  "output": "CMakeFiles/histogram_nodes.dir/src/nodes/float32_unrolled.cc.o"
+},
+{
+  "directory": "/tmp/correctionlib-node-study-1000/provider",
+  "command": "/cvmfs/sft.cern.ch/lcg/releases/gcc/15.2.0-35657/x86_64-el9/bin/g++ -Dhistogram_nodes_EXPORTS -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/src -isystem /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/rapidjson/include -isystem /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/.venv/lib/python3.13/site-packages/correctionlib/include -O3 -DNDEBUG -fPIC -O3 -march=native -ffp-contract=off -Wall -Wextra -o CMakeFiles/histogram_nodes.dir/src/nodes/linear.cc.o -c /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/src/nodes/linear.cc",
+  "file": "/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/src/nodes/linear.cc",
+  "output": "CMakeFiles/histogram_nodes.dir/src/nodes/linear.cc.o"
+},
+{
+  "directory": "/tmp/correctionlib-node-study-1000/provider",
+  "command": "/cvmfs/sft.cern.ch/lcg/releases/gcc/15.2.0-35657/x86_64-el9/bin/g++ -Dhistogram_nodes_EXPORTS -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/src -isystem /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/rapidjson/include -isystem /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/.venv/lib/python3.13/site-packages/correctionlib/include -O3 -DNDEBUG -fPIC -O3 -march=native -ffp-contract=off -Wall -Wextra -o CMakeFiles/histogram_nodes.dir/src/nodes/tree.cc.o -c /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/src/nodes/tree.cc",
+  "file": "/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/src/nodes/tree.cc",
+  "output": "CMakeFiles/histogram_nodes.dir/src/nodes/tree.cc.o"
+},
+{
+  "directory": "/tmp/correctionlib-node-study-1000/provider",
+  "command": "/cvmfs/sft.cern.ch/lcg/releases/gcc/15.2.0-35657/x86_64-el9/bin/g++ -Dhistogram_nodes_EXPORTS -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/src -isystem /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/rapidjson/include -isystem /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/.venv/lib/python3.13/site-packages/correctionlib/include -O3 -DNDEBUG -fPIC -O3 -march=native -ffp-contract=off -Wall -Wextra -o CMakeFiles/histogram_nodes.dir/src/nodes/unrolled.cc.o -c /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/src/nodes/unrolled.cc",
+  "file": "/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/src/nodes/unrolled.cc",
+  "output": "CMakeFiles/histogram_nodes.dir/src/nodes/unrolled.cc.o"
+}
+]

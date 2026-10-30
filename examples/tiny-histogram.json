@@ -1,0 +1,19 @@
+{
+  "schema_version": 2,
+  "description": "Small example of a histogram supplying a calibration factor",
+  "corrections": [
+    {
+      "name": "scale",
+      "version": 1,
+      "inputs": [{"name": "x", "type": "real"}],
+      "output": {"name": "factor", "type": "real"},
+      "data": {
+        "nodetype": "binning",
+        "input": "x",
+        "edges": [0.0, 10.0, 20.0, 40.0],
+        "content": [0.95, 1.02, 1.10],
+        "flow": "clamp"
+      }
+    }
+  ]
+}

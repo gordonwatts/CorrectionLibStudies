@@ -1,0 +1,32 @@
+[build-system]
+requires = ["scikit-build-core>=0.8", "pybind11>=2.6.1"]
+build-backend = "scikit_build_core.build"
+
+[project]
+name = "histogram-node-study"
+version = "0.1.0"
+description = "Matched histogram lookup nodes for the CorrectionLib plugin SDK"
+requires-python = ">=3.9"
+dependencies = [
+  "correctionlib @ git+https://github.com/gordonwatts/correctionlib.git@8dc0b7a8bfe82c15115ff2a5907d4bfa35ee4710",
+  "numpy>=1.24",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[project.entry-points."correctionlib.nodes"]
+"study.hist.binary" = "histogram_nodes:provider"
+"study.hist.linear" = "histogram_nodes:provider"
+"study.hist.tree" = "histogram_nodes:provider"
+"study.hist.unrolled" = "histogram_nodes:provider"
+"study.hist.arithmetic" = "histogram_nodes:provider"
+"study.hist.float32_unrolled" = "histogram_nodes:provider"
+"study.hist.float32_arithmetic" = "histogram_nodes:provider"
+
+[tool.scikit-build]
+wheel.packages = ["python/histogram_nodes"]
+cmake.build-type = "Release"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

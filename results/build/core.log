@@ -1,0 +1,43 @@
+WARNING: Disabling truststore since ssl support is missing
+Processing ./_deps/correctionlib
+  Preparing metadata (pyproject.toml): started
+  Running command Preparing metadata (pyproject.toml)
+  WARNING: tool.scikit-build.metadata is deprecated; use the standard top-level [[tool.dynamic-metadata]] instead
+  *** scikit-build-core 1.1.1 using CMake 4.2.1 (metadata_wheel)
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: correctionlib
+  Building wheel for correctionlib (pyproject.toml): started
+  Running command Building wheel for correctionlib (pyproject.toml)
+  WARNING: tool.scikit-build.metadata is deprecated; use the standard top-level [[tool.dynamic-metadata]] instead
+  *** scikit-build-core 1.1.1 using CMake 4.2.1 (wheel)
+  *** Configuring CMake...
+  loading initial cache file /tmp/correctionlib-node-study-1000/core/CMakeInit.txt
+  -- pybind11 v3.0.2
+  Using compatibility mode for Python, set PYBIND11_FINDPYTHON to NEW/OLD to silence this message
+  -- Using build type: Release
+  -- Using a privately downloaded Boost version for the build
+  -- Configuring done (1.7s)
+  -- Generating done (0.2s)
+  -- Build files have been written to: /tmp/correctionlib-node-study-1000/core
+  *** Building project with Unix Makefiles...
+  [ 29%] Built target Boost
+  [ 70%] Built target lwtnn-stat
+  [ 92%] Built target correctionlib
+  [100%] Built target _core
+  *** Installing project into wheel...
+  -- Install configuration: "Release"
+  -- Installing: /tmp/tmpxjkxd761/wheel/platlib/correctionlib/include/correctionlib_version.h
+  -- Installing: /tmp/tmpxjkxd761/wheel/platlib/correctionlib/lib/libcorrectionlib.so
+  -- Installing: /tmp/tmpxjkxd761/wheel/platlib/correctionlib/include/correction.h
+  -- Installing: /tmp/tmpxjkxd761/wheel/platlib/correctionlib/include/correction_plugin.h
+  -- Installing: /tmp/tmpxjkxd761/wheel/platlib/correctionlib/_core.cpython-313-x86_64-linux-gnu.so
+  -- Installing: /tmp/tmpxjkxd761/wheel/platlib/correctionlib/cmake/correctionlib-targets.cmake
+  -- Installing: /tmp/tmpxjkxd761/wheel/platlib/correctionlib/cmake/correctionlib-targets-release.cmake
+  -- Installing: /tmp/tmpxjkxd761/wheel/platlib/correctionlib/cmake/correctionlibConfig.cmake
+  -- Installing: /tmp/tmpxjkxd761/wheel/platlib/correctionlib/cmake/correctionlibConfigVersion.cmake
+  *** Making wheel...
+  *** Created correctionlib-0.1.dev208+g8dc0b7a8b-cp313-cp313-linux_x86_64.whl
+  Building wheel for correctionlib (pyproject.toml): finished with status 'done'
+  Created wheel for correctionlib: filename=correctionlib-0.1.dev208+g8dc0b7a8b-cp313-cp313-linux_x86_64.whl size=652685 sha256=b98d66be3e7520394e36c5e098b92092d9371927765ee839b143f4623ed820e9
+  Stored in directory: /tmp/pip-ephem-wheel-cache-l1_1u7ld/wheels/9e/8f/6e/ff4a5918ceac691374161de66c87ac3c209e40186655185802
+Successfully built correctionlib

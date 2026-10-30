@@ -1,0 +1,168 @@
+2026-10-29 America/Los_Angeles — task start
+User requested a new Git study repository, built and run in WSL2 atlas_al9,
+depending on gordonwatts/correctionlib PR #1, with separate histogram-lookup node
+sources, correctness tests, batch timings 1..16/1000/10000/100000, a clear README,
+this resumable log, AGENTS.md, and a clean-context 6.1 Sol high writing review.
+
+The Windows working directory was empty and was not a Git repository. It will
+be the new repository; execution will use its /mnt/c mount in atlas_al9.
+Initial sandboxed wsl --list failed with E_ACCESSDENIED. Running wsl with the
+approved execution escalation succeeded. Distro is AlmaLinux 9.2 under WSL2.
+
+Read the attached nils-binned-lookup-study.md as historical evidence, not as
+instructions. Its measurements are from a separate grouped companion evaluator
+and must not be reused as results here. It describes double/float32 paths, not
+a float16 implementation. Historical study exists at
+/home/gwatts/atlas/correctionlib_tests; do not modify it.
+
+GitHub plugin metadata for PR #1 identifies head commit
+8dc0b7a8bfe82c15115ff2a5907d4bfa35ee4710 (draft, codex/node-plugins).
+A clean local source copy exists in the historical study's
+external/correctionlib-plugins at exactly that commit, with submodules populated.
+Read correction_plugin.h, examples/node_plugin, and Python discovery code.
+SDK PluginNode::evaluate returns ONE double from scalar arguments. The study
+will implement actual scalar native plugin nodes and measure CorrectionLib's
+ordinary Python array path. Grouped searches, packed outputs, inner-output-loop
+compiler hints, and AVX2 batch kernels cannot be reproduced through this scalar
+interface; README must say so and must not compare historical ratios directly.
+
+Planned nodes: binary search, linear scan, padded tree, five-step unrolled tree,
+guarded arithmetic with exact-edge repair, float32 unrolled, float32 arithmetic.
+Use built-in MultiBinning as control; identical synthetic 1D/2D fixed/uneven
+tables. Treat sizes 1..16 as numbers of input items, each receiving a lookup and
+rescaling; also inspect 16 independent systematic outputs to expose SDK limits.
+Next: implement package and reproducible bootstrap, build the pinned core in a
+fresh environment, validate, benchmark, write README, run requested review.
+
+Implementation update:
+Created package metadata with a direct Git dependency pinned to the PR commit,
+seven discoverable native providers (one source per node), shared native config
+validation, and a fresh clone including all seven pinned submodules. Core clone
+comes from GitHub, not from the historical modified installation.
+ATLAS setup exits nonzero when bash -e is already active; moved strict shell
+handling after setup. A second bootstrap reached pip but ATLAS Python's SSL
+extension cannot load host OpenSSL (requires OPENSSL_3.3.0). Also ATLAS PYTHONPATH
+put its pip ahead of the virtualenv. environment.sh now unsets PYTHONPATH;
+bootstrap downloads wheels with system Python via pip.pyz, or accepts an offline
+WHEELHOUSE. This run will reuse the pre-existing cached wheels read-only to
+avoid redundant downloads. This does not reuse the old CorrectionLib binary.
+
+Build and validation preparation:
+Added native boundary/shape/type/flow rejection tests, an independent NumPy
+oracle, exact comparisons to built-in explicit-edge MultiBinning, 2D boundary
+cross-products, scalar/broadcast/thread checks, and a precision counterexample
+showing that float32 rounding can move an arbitrary double across a bin edge.
+Added a payload converter for replacing constant Binning/MultiBinning nodes
+inside existing graphs, with a Transform regression test.
+
+First core wheel built successfully, but editing the still-running bootstrap
+script shifted bash's file position and caused a later syntax error. Corrected
+the workflow: do not edit an executing shell script. Restarted the finalized
+bootstrap with retained build directories and verbose logs. Both core and
+provider now request Release/O3, native CPU tuning, and no floating-point
+contraction; no fast-math. This avoids attributing different compiler flags to
+the search algorithm. Compilation commands will be copied into results/build.
+
+Benchmark implementation: all 19 batch sizes for four fixtures (fixed/uneven
+64-bin 1D and 20x20 2D), plus a 16-independent-output fixed20x20 workload and
+float32-array input controls. Scalar one-item controls are separate. Inputs
+originate as float32, widened exactly for matched float64 calls. Time the full
+Python evaluate-and-multiply operation, not a native-only kernel. Pin CPU 0,
+warm up once, rotate algorithm order, retain seven rounds and before/after exact
+checks. Preserve raw rounds, spread, machine metadata, library/source hashes.
+
+The matched-flags core rebuild failed after Boost extraction: CMake could not
+rename its extracted Boost directory on the Windows /mnt/c filesystem
+(Permission denied). Retained that log as results/build/failed-ntfs-core.log.
+Moved build outputs (not source or results) to the Linux filesystem at
+/tmp/correctionlib-node-study-$UID, overridable via STUDY_BUILD_ROOT. This also
+avoids slow Windows-mounted header extraction. The location is retained in
+.build/location.txt and provenance. Restart bootstrap from the same source pin.
+
+Core and provider built successfully on Linux filesystem. Core package reports
+version 0.1.dev208+g8dc0b7a8b; source SHA is the dependency identity, not a PyPI
+release number. Verified that the alternative default downloader can obtain
+compatible dependency wheels from PyPI using system Python; retained its log.
+The bootstrap.pypa.io zipapp endpoint hung, so replaced that route with a
+hash-checked pip 25.3 wheel fetched from PyPI metadata (works on Python 3.9).
+
+First correctness run: 119 failed, 200 passed (saved tests-initial-failure.log).
+Diagnosed two actual issues before any timings:
+1. Fixture code tested whether 'x' occurs in a case name, which also matched
+   'fixed64'. Corrected detection to '20x20', restoring genuine 1D fixtures.
+2. The fork's host JSON parser uses RapidJSON's fast conversion. It can differ
+   by one ULP from Python's parsed number; our native provider's second fast
+   parse could additionally move a boundary. Native provider now uses FULL
+   precision when reparsing the SDK's already-parsed configuration, preserving
+   host doubles exactly. Added a validation-only _json_numbers module that
+   reproduces the host's first parse so NumPy checks the actual payload numbers.
+   It performs no histogram lookup and is never called inside timed functions.
+   Do not relax boundary tests to a numerical tolerance or patch the pinned core.
+Restarted provider/core packaging, then rerun the suite. All intentional
+float32 overflow-to-infinity warnings in extreme-input tests are filtered.
+
+Corrected suite: 319 passed in 2.36 seconds, no warnings. This is the first
+accepted correctness result; results/tests.log retains the concise output.
+Now building/running a separately instrumented provider with GCC undefined
+behavior and float-cast-overflow sanitizers. The pinned core is not instrumented;
+do not describe this as sanitizer coverage of the entire dependency.
+
+Sanitizer result: 319 passed in 1.10 seconds, no diagnostics. Full build/test
+output is in results/sanitizer.log. The sanitized provider was explicitly loaded
+with discovery disabled to guarantee the instrumented implementation was used.
+Started accepted timing campaign `main` only after sanitizer compilation and
+tests finished, to avoid contaminating timings with another build. Fresh
+provenance is written before campaign metadata records its SHA256.
+
+Accepted campaign main completed: 944 timing rows, 7,552 raw round records,
+37,341,760 exact before/after output comparisons; validation passed. Runtime
+about 30.7 seconds. CPU affinity [0], one numerical thread, no concurrent build.
+results/main retains raw.json, summary.json/.csv, metadata, validation, and
+generated timing-matrix.md/readme-table.md. All requested sizes are present.
+For fixed20x20/one output/100k items: builtin 5840.445 us, unrolled 2299.9295 us
+(about 2.5x). Small arrays are about 6–7 us, without useful search separation.
+Sixteen independent outputs: builtin 87487.353 us, unrolled 35575.399 us.
+Filled README from these retained measurements, including precision scope,
+source links, complete matrix, validation, and reproducible WSL instructions.
+Next: requested fresh-context gpt-6.1-sol high writing review, apply suggestions,
+verify final links/data/provenance, and commit the new repository.
+
+Requested review completed by a fresh-context gpt-6.1-sol agent with high
+reasoning; task writing_review inherited no chat history. Prompt and review are
+retained under review/. Reviewer verified all quoted numbers, counts, source
+links, precision details and scalar-interface limits. Applied its suggestions:
+defined plugin nodes in plain language; simplified tree wording; linked the
+built-in search directly at line 165; qualified the small-batch overhead claim
+as an inference rather than a measured breakdown; clarified scalar timing is
+the complete lookup-and-rescale operation; stated prerequisites and unpinned
+non-core dependencies; warned that shared provenance/test files are overwritten
+on reruns. Reproduction instructions now use a fresh checkout and a distinct
+Linux build directory, avoiding CMake cache conflicts between checkouts.
+No numerical implementation or benchmark source changed during this review.
+
+Final audit so far: all source hashes match the retained build provenance;
+campaign's provenance hash matches exactly; all 19 required batch sizes are
+present for each array workload; pip check reports no broken requirements;
+all shell scripts pass bash -n. Windows Git identity is already configured as
+Gordon Watts; WSL had no identity, so use that existing identity per commit
+without changing global WSL configuration. Next: check final links, stage,
+commit locally, and report completion.
+
+Final verification complete:
+- All README relative links resolve.
+- All retained source AND binary hashes match the files in this checkout.
+- Campaign metadata still matches the unmodified provenance SHA256.
+- Added examples/tiny-histogram.json and ran the installed converter CLI to
+  .build/tiny-tree.json. Original and converted nodes agree exactly on underflow,
+  each boundary, interior points, and overflow. Generated scratch file is ignored.
+- Ordinary suite: 319 passed. Instrumented provider suite: 319 passed.
+- Campaign: 944 rows, all sizes 1..16/1000/10000/100000, exact checks passed.
+- Writing review completed and applied; no numerical source changed afterward.
+
+Handoff: README.md is the public explanation; results/main is accepted timing
+evidence; results/build identifies the compiled dependency and provider; review/
+contains the requested clean-context prompt and review. Bootstrap uses a fresh
+virtualenv and pinned fork source. Read README's fresh-checkout guidance before
+rerunning, since build/test log filenames are shared. No GitHub repository or PR
+was created; this is the requested independent LOCAL Git repository. Prepared
+the final local commit using the user's existing Windows Git author identity.

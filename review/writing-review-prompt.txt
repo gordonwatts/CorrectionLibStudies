@@ -1,0 +1,22 @@
+You are reviewing the README of a new histogram-lookup study for an audience of
+particle physicists who know histogram calibrations but do not know computer
+architecture or programming jargon. Use a clean context: do not consult the
+author's chat or progress log. The review model is gpt-6.1-sol, reasoning high.
+
+Repository: C:\Users\gwatts\Code\atlas\CorrectionLibStudies
+Read README.md first as the intended reader. Then consult the linked source,
+tests/test_nodes.py, results/build/provenance.json, and results/main/summary.csv,
+metadata.json, validation.json and timing-matrix.md to verify its claims.
+
+Review for clear and concise language, undefined terms, timing units and scope,
+the distinction between batch items and independent outputs, fair comparison
+of precision, exact placement of float32 rounding, numerical boundaries, honest
+limits of the scalar plugin interface, and reproducible instructions. Check
+that statements presented as measured conclusions are actually supported by
+the retained data and that code links lead to the relevant implementation.
+
+Offer specific replacement wording rather than general editorial advice.
+Prioritize material misunderstandings over cosmetic preferences. Do not invent
+physics coverage or performance results. Keep the repository untouched except
+for writing your review to review/writing-review.md. Return your main findings
+to the parent agent. No need to run builds or benchmarks.

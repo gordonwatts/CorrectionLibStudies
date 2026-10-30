@@ -1,0 +1,218 @@
+[
+{
+  "directory": "/tmp/correctionlib-node-study-1000/core",
+  "command": "/cvmfs/sft.cern.ch/lcg/releases/gcc/15.2.0-35657/x86_64-el9/bin/g++ -Dcorrectionlib_EXPORTS -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/include -I/tmp/correctionlib-node-study-1000/core/include -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/rapidjson/include -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/cpp-peglib -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/xxhash -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/pcg-cpp/include -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/include -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/eigen -march=native -ffp-contract=off -O3 -DNDEBUG -std=c++17 -fPIC -Wall -Wextra -Wpedantic -Werror -Wno-deprecated-literal-operator -o CMakeFiles/correctionlib.dir/src/correction.cc.o -c /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/src/correction.cc",
+  "file": "/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/src/correction.cc",
+  "output": "CMakeFiles/correctionlib.dir/src/correction.cc.o"
+},
+{
+  "directory": "/tmp/correctionlib-node-study-1000/core",
+  "command": "/cvmfs/sft.cern.ch/lcg/releases/gcc/15.2.0-35657/x86_64-el9/bin/g++ -Dcorrectionlib_EXPORTS -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/include -I/tmp/correctionlib-node-study-1000/core/include -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/rapidjson/include -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/cpp-peglib -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/xxhash -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/pcg-cpp/include -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/include -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/eigen -march=native -ffp-contract=off -O3 -DNDEBUG -std=c++17 -fPIC -Wall -Wextra -Wpedantic -Werror -Wno-deprecated-literal-operator -o CMakeFiles/correctionlib.dir/src/formula_ast.cc.o -c /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/src/formula_ast.cc",
+  "file": "/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/src/formula_ast.cc",
+  "output": "CMakeFiles/correctionlib.dir/src/formula_ast.cc.o"
+},
+{
+  "directory": "/tmp/correctionlib-node-study-1000/core",
+  "command": "/cvmfs/sft.cern.ch/lcg/releases/gcc/15.2.0-35657/x86_64-el9/bin/g++ -Dcorrectionlib_EXPORTS -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/include -I/tmp/correctionlib-node-study-1000/core/include -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/rapidjson/include -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/cpp-peglib -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/xxhash -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/pcg-cpp/include -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/include -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/eigen -march=native -ffp-contract=off -O3 -DNDEBUG -std=c++17 -fPIC -Wall -Wextra -Wpedantic -Werror -Wno-deprecated-literal-operator -o CMakeFiles/correctionlib.dir/src/plugin.cc.o -c /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/src/plugin.cc",
+  "file": "/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/src/plugin.cc",
+  "output": "CMakeFiles/correctionlib.dir/src/plugin.cc.o"
+},
+{
+  "directory": "/tmp/correctionlib-node-study-1000/core",
+  "command": "/cvmfs/sft.cern.ch/lcg/releases/gcc/15.2.0-35657/x86_64-el9/bin/g++ -Dcorrectionlib_EXPORTS -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/include -I/tmp/correctionlib-node-study-1000/core/include -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/rapidjson/include -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/cpp-peglib -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/xxhash -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/pcg-cpp/include -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/include -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/eigen -march=native -ffp-contract=off -O3 -DNDEBUG -std=c++17 -fPIC -Wall -Wextra -Wpedantic -Werror -Wno-deprecated-literal-operator -o CMakeFiles/correctionlib.dir/src/detail_impl.cc.o -c /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/src/detail_impl.cc",
+  "file": "/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/src/detail_impl.cc",
+  "output": "CMakeFiles/correctionlib.dir/src/detail_impl.cc.o"
+},
+{
+  "directory": "/tmp/correctionlib-node-study-1000/core",
+  "command": "/cvmfs/sft.cern.ch/lcg/releases/gcc/15.2.0-35657/x86_64-el9/bin/g++ -Dcorrectionlib_EXPORTS -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/include -I/tmp/correctionlib-node-study-1000/core/include -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/rapidjson/include -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/cpp-peglib -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/xxhash -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/pcg-cpp/include -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/include -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/eigen -march=native -ffp-contract=off -O3 -DNDEBUG -std=c++17 -fPIC -Wall -Wextra -Wpedantic -Werror -Wno-deprecated-literal-operator -o CMakeFiles/correctionlib.dir/src/lwtnn.cc.o -c /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/src/lwtnn.cc",
+  "file": "/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/src/lwtnn.cc",
+  "output": "CMakeFiles/correctionlib.dir/src/lwtnn.cc.o"
+},
+{
+  "directory": "/tmp/correctionlib-node-study-1000/core",
+  "command": "/cvmfs/sft.cern.ch/lcg/releases/gcc/15.2.0-35657/x86_64-el9/bin/g++ -D_core_EXPORTS -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/include -I/tmp/correctionlib-node-study-1000/core/include -isystem /cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.100/InstallArea/x86_64-el9-gcc15-opt/include/python3.13 -isystem /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/pybind11/include -march=native -ffp-contract=off -O3 -DNDEBUG -std=c++17 -fPIC -fvisibility=hidden -Wall -Wextra -Wpedantic -Werror -flto=auto -fno-fat-lto-objects -o CMakeFiles/_core.dir/src/python.cc.o -c /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/src/python.cc",
+  "file": "/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/src/python.cc",
+  "output": "CMakeFiles/_core.dir/src/python.cc.o"
+},
+{
+  "directory": "/tmp/correctionlib-node-study-1000/core",
+  "command": "/cvmfs/sft.cern.ch/lcg/releases/gcc/15.2.0-35657/x86_64-el9/bin/g++  -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/include -I/tmp/correctionlib-node-study-1000/core/include -march=native -ffp-contract=off -O3 -DNDEBUG -std=c++17 -fPIE -o CMakeFiles/demo.dir/src/demo.cc.o -c /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/src/demo.cc",
+  "file": "/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/src/demo.cc",
+  "output": "CMakeFiles/demo.dir/src/demo.cc.o"
+},
+{
+  "directory": "/tmp/correctionlib-node-study-1000/core",
+  "command": "/cvmfs/sft.cern.ch/lcg/releases/gcc/15.2.0-35657/x86_64-el9/bin/g++  -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/include -I/tmp/correctionlib-node-study-1000/core/include -march=native -ffp-contract=off -O3 -DNDEBUG -std=c++17 -fPIE -o CMakeFiles/lwtnn_demo.dir/src/lwtnn_demo.cc.o -c /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/src/lwtnn_demo.cc",
+  "file": "/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/src/lwtnn_demo.cc",
+  "output": "CMakeFiles/lwtnn_demo.dir/src/lwtnn_demo.cc.o"
+},
+{
+  "directory": "/tmp/correctionlib-node-study-1000/core/lwtnn",
+  "command": "/cvmfs/sft.cern.ch/lcg/releases/gcc/15.2.0-35657/x86_64-el9/bin/g++  -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/eigen -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/include -I/tmp/correctionlib-node-study-1000/core/lwtnn/externals/Boost/include -march=native -ffp-contract=off -Wall -pedantic -Wextra -Wcomment -Wunused-value -O3 -DNDEBUG -std=c++11 -fPIC -o CMakeFiles/lwtnn-stat.dir/src/Exceptions.cxx.o -c /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/src/Exceptions.cxx",
+  "file": "/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/src/Exceptions.cxx",
+  "output": "lwtnn/CMakeFiles/lwtnn-stat.dir/src/Exceptions.cxx.o"
+},
+{
+  "directory": "/tmp/correctionlib-node-study-1000/core/lwtnn",
+  "command": "/cvmfs/sft.cern.ch/lcg/releases/gcc/15.2.0-35657/x86_64-el9/bin/g++  -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/eigen -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/include -I/tmp/correctionlib-node-study-1000/core/lwtnn/externals/Boost/include -march=native -ffp-contract=off -Wall -pedantic -Wextra -Wcomment -Wunused-value -O3 -DNDEBUG -std=c++11 -fPIC -o CMakeFiles/lwtnn-stat.dir/src/LightweightNeuralNetwork.cxx.o -c /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/src/LightweightNeuralNetwork.cxx",
+  "file": "/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/src/LightweightNeuralNetwork.cxx",
+  "output": "lwtnn/CMakeFiles/lwtnn-stat.dir/src/LightweightNeuralNetwork.cxx.o"
+},
+{
+  "directory": "/tmp/correctionlib-node-study-1000/core/lwtnn",
+  "command": "/cvmfs/sft.cern.ch/lcg/releases/gcc/15.2.0-35657/x86_64-el9/bin/g++  -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/eigen -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/include -I/tmp/correctionlib-node-study-1000/core/lwtnn/externals/Boost/include -march=native -ffp-contract=off -Wall -pedantic -Wextra -Wcomment -Wunused-value -O3 -DNDEBUG -std=c++11 -fPIC -o CMakeFiles/lwtnn-stat.dir/src/LightweightGraph.cxx.o -c /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/src/LightweightGraph.cxx",
+  "file": "/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/src/LightweightGraph.cxx",
+  "output": "lwtnn/CMakeFiles/lwtnn-stat.dir/src/LightweightGraph.cxx.o"
+},
+{
+  "directory": "/tmp/correctionlib-node-study-1000/core/lwtnn",
+  "command": "/cvmfs/sft.cern.ch/lcg/releases/gcc/15.2.0-35657/x86_64-el9/bin/g++  -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/eigen -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/include -I/tmp/correctionlib-node-study-1000/core/lwtnn/externals/Boost/include -march=native -ffp-contract=off -Wall -pedantic -Wextra -Wcomment -Wunused-value -O3 -DNDEBUG -std=c++11 -fPIC -o CMakeFiles/lwtnn-stat.dir/src/NanReplacer.cxx.o -c /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/src/NanReplacer.cxx",
+  "file": "/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/src/NanReplacer.cxx",
+  "output": "lwtnn/CMakeFiles/lwtnn-stat.dir/src/NanReplacer.cxx.o"
+},
+{
+  "directory": "/tmp/correctionlib-node-study-1000/core/lwtnn",
+  "command": "/cvmfs/sft.cern.ch/lcg/releases/gcc/15.2.0-35657/x86_64-el9/bin/g++  -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/eigen -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/include -I/tmp/correctionlib-node-study-1000/core/lwtnn/externals/Boost/include -march=native -ffp-contract=off -Wall -pedantic -Wextra -Wcomment -Wunused-value -O3 -DNDEBUG -std=c++11 -fPIC -o CMakeFiles/lwtnn-stat.dir/src/FastInputPreprocessor.cxx.o -c /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/src/FastInputPreprocessor.cxx",
+  "file": "/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/src/FastInputPreprocessor.cxx",
+  "output": "lwtnn/CMakeFiles/lwtnn-stat.dir/src/FastInputPreprocessor.cxx.o"
+},
+{
+  "directory": "/tmp/correctionlib-node-study-1000/core/lwtnn",
+  "command": "/cvmfs/sft.cern.ch/lcg/releases/gcc/15.2.0-35657/x86_64-el9/bin/g++  -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/eigen -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/include -I/tmp/correctionlib-node-study-1000/core/lwtnn/externals/Boost/include -march=native -ffp-contract=off -Wall -pedantic -Wextra -Wcomment -Wunused-value -O3 -DNDEBUG -std=c++11 -fPIC -o CMakeFiles/lwtnn-stat.dir/src/FastGraph.cxx.o -c /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/src/FastGraph.cxx",
+  "file": "/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/src/FastGraph.cxx",
+  "output": "lwtnn/CMakeFiles/lwtnn-stat.dir/src/FastGraph.cxx.o"
+},
+{
+  "directory": "/tmp/correctionlib-node-study-1000/core/lwtnn",
+  "command": "/cvmfs/sft.cern.ch/lcg/releases/gcc/15.2.0-35657/x86_64-el9/bin/g++  -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/eigen -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/include -I/tmp/correctionlib-node-study-1000/core/lwtnn/externals/Boost/include -march=native -ffp-contract=off -Wall -pedantic -Wextra -Wcomment -Wunused-value -O3 -DNDEBUG -std=c++11 -fPIC -o CMakeFiles/lwtnn-stat.dir/src/Stack.cxx.o -c /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/src/Stack.cxx",
+  "file": "/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/src/Stack.cxx",
+  "output": "lwtnn/CMakeFiles/lwtnn-stat.dir/src/Stack.cxx.o"
+},
+{
+  "directory": "/tmp/correctionlib-node-study-1000/core/lwtnn",
+  "command": "/cvmfs/sft.cern.ch/lcg/releases/gcc/15.2.0-35657/x86_64-el9/bin/g++  -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/eigen -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/include -I/tmp/correctionlib-node-study-1000/core/lwtnn/externals/Boost/include -march=native -ffp-contract=off -Wall -pedantic -Wextra -Wcomment -Wunused-value -O3 -DNDEBUG -std=c++11 -fPIC -o CMakeFiles/lwtnn-stat.dir/src/lightweight_nn_streamers.cxx.o -c /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/src/lightweight_nn_streamers.cxx",
+  "file": "/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/src/lightweight_nn_streamers.cxx",
+  "output": "lwtnn/CMakeFiles/lwtnn-stat.dir/src/lightweight_nn_streamers.cxx.o"
+},
+{
+  "directory": "/tmp/correctionlib-node-study-1000/core/lwtnn",
+  "command": "/cvmfs/sft.cern.ch/lcg/releases/gcc/15.2.0-35657/x86_64-el9/bin/g++  -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/eigen -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/include -I/tmp/correctionlib-node-study-1000/core/lwtnn/externals/Boost/include -march=native -ffp-contract=off -Wall -pedantic -Wextra -Wcomment -Wunused-value -O3 -DNDEBUG -std=c++11 -fPIC -o CMakeFiles/lwtnn-stat.dir/src/parse_json.cxx.o -c /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/src/parse_json.cxx",
+  "file": "/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/src/parse_json.cxx",
+  "output": "lwtnn/CMakeFiles/lwtnn-stat.dir/src/parse_json.cxx.o"
+},
+{
+  "directory": "/tmp/correctionlib-node-study-1000/core/lwtnn",
+  "command": "/cvmfs/sft.cern.ch/lcg/releases/gcc/15.2.0-35657/x86_64-el9/bin/g++  -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/eigen -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/include -I/tmp/correctionlib-node-study-1000/core/lwtnn/externals/Boost/include -march=native -ffp-contract=off -Wall -pedantic -Wextra -Wcomment -Wunused-value -O3 -DNDEBUG -std=c++11 -fPIC -o CMakeFiles/lwtnn-stat.dir/src/test_utilities.cxx.o -c /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/src/test_utilities.cxx",
+  "file": "/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/src/test_utilities.cxx",
+  "output": "lwtnn/CMakeFiles/lwtnn-stat.dir/src/test_utilities.cxx.o"
+},
+{
+  "directory": "/tmp/correctionlib-node-study-1000/core/lwtnn",
+  "command": "/cvmfs/sft.cern.ch/lcg/releases/gcc/15.2.0-35657/x86_64-el9/bin/g++ -Dlwtnn_EXPORTS -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/eigen -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/include -I/tmp/correctionlib-node-study-1000/core/lwtnn/externals/Boost/include -march=native -ffp-contract=off -Wall -pedantic -Wextra -Wcomment -Wunused-value -O3 -DNDEBUG -std=c++11 -fPIC -o CMakeFiles/lwtnn.dir/src/Exceptions.cxx.o -c /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/src/Exceptions.cxx",
+  "file": "/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/src/Exceptions.cxx",
+  "output": "lwtnn/CMakeFiles/lwtnn.dir/src/Exceptions.cxx.o"
+},
+{
+  "directory": "/tmp/correctionlib-node-study-1000/core/lwtnn",
+  "command": "/cvmfs/sft.cern.ch/lcg/releases/gcc/15.2.0-35657/x86_64-el9/bin/g++ -Dlwtnn_EXPORTS -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/eigen -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/include -I/tmp/correctionlib-node-study-1000/core/lwtnn/externals/Boost/include -march=native -ffp-contract=off -Wall -pedantic -Wextra -Wcomment -Wunused-value -O3 -DNDEBUG -std=c++11 -fPIC -o CMakeFiles/lwtnn.dir/src/LightweightNeuralNetwork.cxx.o -c /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/src/LightweightNeuralNetwork.cxx",
+  "file": "/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/src/LightweightNeuralNetwork.cxx",
+  "output": "lwtnn/CMakeFiles/lwtnn.dir/src/LightweightNeuralNetwork.cxx.o"
+},
+{
+  "directory": "/tmp/correctionlib-node-study-1000/core/lwtnn",
+  "command": "/cvmfs/sft.cern.ch/lcg/releases/gcc/15.2.0-35657/x86_64-el9/bin/g++ -Dlwtnn_EXPORTS -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/eigen -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/include -I/tmp/correctionlib-node-study-1000/core/lwtnn/externals/Boost/include -march=native -ffp-contract=off -Wall -pedantic -Wextra -Wcomment -Wunused-value -O3 -DNDEBUG -std=c++11 -fPIC -o CMakeFiles/lwtnn.dir/src/LightweightGraph.cxx.o -c /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/src/LightweightGraph.cxx",
+  "file": "/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/src/LightweightGraph.cxx",
+  "output": "lwtnn/CMakeFiles/lwtnn.dir/src/LightweightGraph.cxx.o"
+},
+{
+  "directory": "/tmp/correctionlib-node-study-1000/core/lwtnn",
+  "command": "/cvmfs/sft.cern.ch/lcg/releases/gcc/15.2.0-35657/x86_64-el9/bin/g++ -Dlwtnn_EXPORTS -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/eigen -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/include -I/tmp/correctionlib-node-study-1000/core/lwtnn/externals/Boost/include -march=native -ffp-contract=off -Wall -pedantic -Wextra -Wcomment -Wunused-value -O3 -DNDEBUG -std=c++11 -fPIC -o CMakeFiles/lwtnn.dir/src/NanReplacer.cxx.o -c /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/src/NanReplacer.cxx",
+  "file": "/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/src/NanReplacer.cxx",
+  "output": "lwtnn/CMakeFiles/lwtnn.dir/src/NanReplacer.cxx.o"
+},
+{
+  "directory": "/tmp/correctionlib-node-study-1000/core/lwtnn",
+  "command": "/cvmfs/sft.cern.ch/lcg/releases/gcc/15.2.0-35657/x86_64-el9/bin/g++ -Dlwtnn_EXPORTS -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/eigen -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/include -I/tmp/correctionlib-node-study-1000/core/lwtnn/externals/Boost/include -march=native -ffp-contract=off -Wall -pedantic -Wextra -Wcomment -Wunused-value -O3 -DNDEBUG -std=c++11 -fPIC -o CMakeFiles/lwtnn.dir/src/FastInputPreprocessor.cxx.o -c /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/src/FastInputPreprocessor.cxx",
+  "file": "/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/src/FastInputPreprocessor.cxx",
+  "output": "lwtnn/CMakeFiles/lwtnn.dir/src/FastInputPreprocessor.cxx.o"
+},
+{
+  "directory": "/tmp/correctionlib-node-study-1000/core/lwtnn",
+  "command": "/cvmfs/sft.cern.ch/lcg/releases/gcc/15.2.0-35657/x86_64-el9/bin/g++ -Dlwtnn_EXPORTS -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/eigen -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/include -I/tmp/correctionlib-node-study-1000/core/lwtnn/externals/Boost/include -march=native -ffp-contract=off -Wall -pedantic -Wextra -Wcomment -Wunused-value -O3 -DNDEBUG -std=c++11 -fPIC -o CMakeFiles/lwtnn.dir/src/FastGraph.cxx.o -c /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/src/FastGraph.cxx",
+  "file": "/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/src/FastGraph.cxx",
+  "output": "lwtnn/CMakeFiles/lwtnn.dir/src/FastGraph.cxx.o"
+},
+{
+  "directory": "/tmp/correctionlib-node-study-1000/core/lwtnn",
+  "command": "/cvmfs/sft.cern.ch/lcg/releases/gcc/15.2.0-35657/x86_64-el9/bin/g++ -Dlwtnn_EXPORTS -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/eigen -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/include -I/tmp/correctionlib-node-study-1000/core/lwtnn/externals/Boost/include -march=native -ffp-contract=off -Wall -pedantic -Wextra -Wcomment -Wunused-value -O3 -DNDEBUG -std=c++11 -fPIC -o CMakeFiles/lwtnn.dir/src/Stack.cxx.o -c /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/src/Stack.cxx",
+  "file": "/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/src/Stack.cxx",
+  "output": "lwtnn/CMakeFiles/lwtnn.dir/src/Stack.cxx.o"
+},
+{
+  "directory": "/tmp/correctionlib-node-study-1000/core/lwtnn",
+  "command": "/cvmfs/sft.cern.ch/lcg/releases/gcc/15.2.0-35657/x86_64-el9/bin/g++ -Dlwtnn_EXPORTS -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/eigen -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/include -I/tmp/correctionlib-node-study-1000/core/lwtnn/externals/Boost/include -march=native -ffp-contract=off -Wall -pedantic -Wextra -Wcomment -Wunused-value -O3 -DNDEBUG -std=c++11 -fPIC -o CMakeFiles/lwtnn.dir/src/lightweight_nn_streamers.cxx.o -c /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/src/lightweight_nn_streamers.cxx",
+  "file": "/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/src/lightweight_nn_streamers.cxx",
+  "output": "lwtnn/CMakeFiles/lwtnn.dir/src/lightweight_nn_streamers.cxx.o"
+},
+{
+  "directory": "/tmp/correctionlib-node-study-1000/core/lwtnn",
+  "command": "/cvmfs/sft.cern.ch/lcg/releases/gcc/15.2.0-35657/x86_64-el9/bin/g++ -Dlwtnn_EXPORTS -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/eigen -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/include -I/tmp/correctionlib-node-study-1000/core/lwtnn/externals/Boost/include -march=native -ffp-contract=off -Wall -pedantic -Wextra -Wcomment -Wunused-value -O3 -DNDEBUG -std=c++11 -fPIC -o CMakeFiles/lwtnn.dir/src/parse_json.cxx.o -c /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/src/parse_json.cxx",
+  "file": "/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/src/parse_json.cxx",
+  "output": "lwtnn/CMakeFiles/lwtnn.dir/src/parse_json.cxx.o"
+},
+{
+  "directory": "/tmp/correctionlib-node-study-1000/core/lwtnn",
+  "command": "/cvmfs/sft.cern.ch/lcg/releases/gcc/15.2.0-35657/x86_64-el9/bin/g++ -Dlwtnn_EXPORTS -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/eigen -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/include -I/tmp/correctionlib-node-study-1000/core/lwtnn/externals/Boost/include -march=native -ffp-contract=off -Wall -pedantic -Wextra -Wcomment -Wunused-value -O3 -DNDEBUG -std=c++11 -fPIC -o CMakeFiles/lwtnn.dir/src/test_utilities.cxx.o -c /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/src/test_utilities.cxx",
+  "file": "/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/src/test_utilities.cxx",
+  "output": "lwtnn/CMakeFiles/lwtnn.dir/src/test_utilities.cxx.o"
+},
+{
+  "directory": "/tmp/correctionlib-node-study-1000/core/lwtnn",
+  "command": "/cvmfs/sft.cern.ch/lcg/releases/gcc/15.2.0-35657/x86_64-el9/bin/g++  -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/eigen -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/include -isystem /tmp/correctionlib-node-study-1000/core/lwtnn/externals/Boost/include -march=native -ffp-contract=off -Wall -pedantic -Wextra -Wcomment -Wunused-value -O3 -DNDEBUG -std=c++11 -fPIE -o CMakeFiles/lwtnn-benchmark-rnn.dir/src/lwtnn-benchmark-rnn.cxx.o -c /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/src/lwtnn-benchmark-rnn.cxx",
+  "file": "/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/src/lwtnn-benchmark-rnn.cxx",
+  "output": "lwtnn/CMakeFiles/lwtnn-benchmark-rnn.dir/src/lwtnn-benchmark-rnn.cxx.o"
+},
+{
+  "directory": "/tmp/correctionlib-node-study-1000/core/lwtnn",
+  "command": "/cvmfs/sft.cern.ch/lcg/releases/gcc/15.2.0-35657/x86_64-el9/bin/g++  -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/eigen -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/include -isystem /tmp/correctionlib-node-study-1000/core/lwtnn/externals/Boost/include -march=native -ffp-contract=off -Wall -pedantic -Wextra -Wcomment -Wunused-value -O3 -DNDEBUG -std=c++11 -fPIE -o CMakeFiles/lwtnn-dump-config.dir/src/lwtnn-dump-config.cxx.o -c /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/src/lwtnn-dump-config.cxx",
+  "file": "/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/src/lwtnn-dump-config.cxx",
+  "output": "lwtnn/CMakeFiles/lwtnn-dump-config.dir/src/lwtnn-dump-config.cxx.o"
+},
+{
+  "directory": "/tmp/correctionlib-node-study-1000/core/lwtnn",
+  "command": "/cvmfs/sft.cern.ch/lcg/releases/gcc/15.2.0-35657/x86_64-el9/bin/g++  -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/eigen -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/include -isystem /tmp/correctionlib-node-study-1000/core/lwtnn/externals/Boost/include -march=native -ffp-contract=off -Wall -pedantic -Wextra -Wcomment -Wunused-value -O3 -DNDEBUG -std=c++11 -fPIE -o CMakeFiles/lwtnn-test-arbitrary-net.dir/src/lwtnn-test-arbitrary-net.cxx.o -c /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/src/lwtnn-test-arbitrary-net.cxx",
+  "file": "/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/src/lwtnn-test-arbitrary-net.cxx",
+  "output": "lwtnn/CMakeFiles/lwtnn-test-arbitrary-net.dir/src/lwtnn-test-arbitrary-net.cxx.o"
+},
+{
+  "directory": "/tmp/correctionlib-node-study-1000/core/lwtnn",
+  "command": "/cvmfs/sft.cern.ch/lcg/releases/gcc/15.2.0-35657/x86_64-el9/bin/g++  -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/eigen -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/include -isystem /tmp/correctionlib-node-study-1000/core/lwtnn/externals/Boost/include -march=native -ffp-contract=off -Wall -pedantic -Wextra -Wcomment -Wunused-value -O3 -DNDEBUG -std=c++11 -fPIE -o CMakeFiles/lwtnn-test-graph.dir/src/lwtnn-test-graph.cxx.o -c /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/src/lwtnn-test-graph.cxx",
+  "file": "/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/src/lwtnn-test-graph.cxx",
+  "output": "lwtnn/CMakeFiles/lwtnn-test-graph.dir/src/lwtnn-test-graph.cxx.o"
+},
+{
+  "directory": "/tmp/correctionlib-node-study-1000/core/lwtnn",
+  "command": "/cvmfs/sft.cern.ch/lcg/releases/gcc/15.2.0-35657/x86_64-el9/bin/g++  -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/eigen -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/include -isystem /tmp/correctionlib-node-study-1000/core/lwtnn/externals/Boost/include -march=native -ffp-contract=off -Wall -pedantic -Wextra -Wcomment -Wunused-value -O3 -DNDEBUG -std=c++11 -fPIE -o CMakeFiles/lwtnn-test-lightweight-graph.dir/src/lwtnn-test-lightweight-graph.cxx.o -c /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/src/lwtnn-test-lightweight-graph.cxx",
+  "file": "/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/src/lwtnn-test-lightweight-graph.cxx",
+  "output": "lwtnn/CMakeFiles/lwtnn-test-lightweight-graph.dir/src/lwtnn-test-lightweight-graph.cxx.o"
+},
+{
+  "directory": "/tmp/correctionlib-node-study-1000/core/lwtnn",
+  "command": "/cvmfs/sft.cern.ch/lcg/releases/gcc/15.2.0-35657/x86_64-el9/bin/g++  -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/eigen -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/include -isystem /tmp/correctionlib-node-study-1000/core/lwtnn/externals/Boost/include -march=native -ffp-contract=off -Wall -pedantic -Wextra -Wcomment -Wunused-value -O3 -DNDEBUG -std=c++11 -fPIE -o CMakeFiles/lwtnn-test-rnn.dir/src/lwtnn-test-rnn.cxx.o -c /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/src/lwtnn-test-rnn.cxx",
+  "file": "/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/src/lwtnn-test-rnn.cxx",
+  "output": "lwtnn/CMakeFiles/lwtnn-test-rnn.dir/src/lwtnn-test-rnn.cxx.o"
+},
+{
+  "directory": "/tmp/correctionlib-node-study-1000/core/lwtnn",
+  "command": "/cvmfs/sft.cern.ch/lcg/releases/gcc/15.2.0-35657/x86_64-el9/bin/g++  -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/eigen -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/include -isystem /tmp/correctionlib-node-study-1000/core/lwtnn/externals/Boost/include -march=native -ffp-contract=off -Wall -pedantic -Wextra -Wcomment -Wunused-value -O3 -DNDEBUG -std=c++11 -fPIE -o CMakeFiles/lwtnn-test-fastgraph.dir/src/lwtnn-test-fastgraph.cxx.o -c /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/src/lwtnn-test-fastgraph.cxx",
+  "file": "/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/src/lwtnn-test-fastgraph.cxx",
+  "output": "lwtnn/CMakeFiles/lwtnn-test-fastgraph.dir/src/lwtnn-test-fastgraph.cxx.o"
+},
+{
+  "directory": "/tmp/correctionlib-node-study-1000/core/lwtnn",
+  "command": "/cvmfs/sft.cern.ch/lcg/releases/gcc/15.2.0-35657/x86_64-el9/bin/g++  -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/eigen -I/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/include -march=native -ffp-contract=off -Wall -pedantic -Wextra -Wcomment -Wunused-value -O3 -DNDEBUG -std=c++11 -fPIE -o CMakeFiles/test-nn-streamers.dir/tests/test-nn-streamers.cxx.o -c /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/tests/test-nn-streamers.cxx",
+  "file": "/mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/_deps/correctionlib/lwtnn/tests/test-nn-streamers.cxx",
+  "output": "lwtnn/CMakeFiles/test-nn-streamers.dir/tests/test-nn-streamers.cxx.o"
+}
+]
