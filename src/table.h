@@ -34,6 +34,8 @@ template<class T> T narrow(double value) {
 }
 
 template<class T> struct Axis {
+  // A histogram with n bins has n+1 edges. Keep all of them for flow checks,
+  // but give the tree searches a separate array of bin LOWER edges.
   std::vector<T> edges, padded;
   size_t n, power = 1;
   T scale = 0;
@@ -42,29 +44,49 @@ template<class T> struct Axis {
   explicit Axis(const std::vector<double>& original) : n(original.size()-1) {
     for (double edge : original) {
       T threshold = narrow<T>(edge);
-      // A representable float x >= original edge iff x >= ceil_float(edge).
+      // Rounding an edge downward could put a float32 coordinate in the bin
+      // above its original float64 boundary. Instead use the smallest float32
+      // threshold at or above that boundary. For an already-float32 coordinate,
+      // crossing this threshold is equivalent to crossing the original edge.
       if constexpr (std::is_same_v<T, float>) {
         if (static_cast<double>(threshold) < edge)
           threshold = std::nextafter(threshold, std::numeric_limits<T>::infinity());
       }
       edges.push_back(threshold);
     }
+    // The looped tree needs a power-of-two length; the five-step search needs
+    // at least 32 entries. Fill unused positions with +infinity so finite
+    // coordinates stay below them. Copy only the n lower edges, not the final
+    // upper edge; searches return a bin number, not an edge number.
     while (power < n) power *= 2;
     padded.assign(std::max(size_t(32),power), std::numeric_limits<T>::infinity());
     std::copy_n(edges.begin(), n, padded.begin());
+    // Decide whether arithmetic indexing is worth trying from the original
+    // float64 edges. Allow small rounding differences from generating equally
+    // spaced edges; the search will still repair its estimate against edges.
     double width = (original.back()-original.front())/n;
     uniform = std::isfinite(width) && width > 0;
     for (size_t i=1; i<n; ++i)
       uniform &= std::abs(original[i]-(original.front()+i*width)) <=
         64*std::numeric_limits<double>::epsilon()*std::max({1.,std::abs(original[i]),std::abs(original.back()-original.front())});
+    // Recheck in the node's actual precision. Narrowing to float32 can collapse
+    // the span or make its inverse nonfinite, requiring the tree fallback.
     T span = edges.back()-edges.front();
     scale = T(n)/span;
     uniform &= std::isfinite(span) && span > 0 && std::isfinite(scale) && scale > 0;
   }
 
   size_t tree(T x) const {
+    // Find the last bin lower edge that x has reached. Start with candidate
+    // bin zero. Here power is the smallest power of two covering all bins;
+    // try jumps of power/2, power/4, and so on down to one.
+    // Each comparison adds either the whole jump or zero, rather than choosing
+    // separate left/right code paths. Equality moves right: an edge belongs
+    // to the bin starting there. For example, with eight bins, try 4, 2, 1.
     size_t k=0;
     for (size_t step=power/2; step; step/=2) k += size_t(!(x < padded[k+step]))*step;
+    // +infinity and NaN can advance into the padding. Map those candidates to
+    // the last real bin; the caller has already handled numeric/error flow.
     return std::min(k,n-1);
   }
 
@@ -91,11 +113,18 @@ public:
   double evaluate(const std::vector<Variable::Type>& values) const override {
     size_t flat=0;
     for (size_t d=0; d<axes_.size(); ++d) {
+      // The SDK passes doubles. Float32 nodes round each coordinate here,
+      // before either the range check or the choice of bin.
       const T x=narrow<T>(std::get<double>(values.at(inputs_[d])));
       const auto& a=axes_[d];
+      // The last edge is excluded. Writing "not below" also treats NaN as
+      // overflow, matching the built-in explicit-edge histogram behavior.
       const bool outside=x<a.edges.front() || !(x<a.edges.back());
       if (outside && flow_==1) return static_cast<double>(fallback_);
       if (outside && flow_==2) throw std::runtime_error("coordinate outside histogram");
+      // All searches clamp to an endpoint bin. If flow was neither numeric nor
+      // error, that is the requested behavior. In 2D, this turns (ix, iy) into
+      // ix * number_of_y_bins + iy, so y changes fastest in the content array.
       flat=flat*a.n+Policy::find(a,x);
     }
     return static_cast<double>(content_[flat]);

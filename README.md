@@ -160,6 +160,10 @@ versions; the [core](results/build/core-compile-commands.json) and
 [provider](results/build/provider-compile-commands.json) compile commands are
 retained as well.
 
+The source hashes describe the measured version, before the later axis-search
+comments were added. A [comparison of code tokens and string literals](review/axis-comments-check.json)
+verifies that those annotations leave the executable source unchanged.
+
 The [correctness suite](tests/test_nodes.py) checks exact edges and neighboring
 representable values, NaN and infinities, all three flow policies, singleton
 axes, the 32-bin search limit, extreme scales, malformed configurations,

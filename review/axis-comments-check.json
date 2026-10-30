@@ -1,0 +1,64 @@
+{
+  "baseline_commit": "581cf31377a2a1a38bb3e694520905837d6bd3aa",
+  "scope": "Seven axis-search nodes and shared axis implementation",
+  "method": "Compare C++ lexical tokens, retaining string literals and preprocessor directives; discard only comments and whitespace.",
+  "binary_hashes_unchanged": true,
+  "files": [
+    {
+      "file": "src/table.h",
+      "tokens_and_literals_identical": true,
+      "baseline_matches_measured_source_sha256": true,
+      "token_count": 1166,
+      "token_sha256": "4a3981fce4fb361717d5bc3b5b1fb484e3eccaee9ada20919ff8888012ea3a77"
+    },
+    {
+      "file": "src/nodes/arithmetic.cc",
+      "tokens_and_literals_identical": true,
+      "baseline_matches_measured_source_sha256": true,
+      "token_count": 217,
+      "token_sha256": "ce298a07f214290bb1ea767c5fbeb059fce2740def00600e4af8d93165b6cea9"
+    },
+    {
+      "file": "src/nodes/binary.cc",
+      "tokens_and_literals_identical": true,
+      "baseline_matches_measured_source_sha256": true,
+      "token_count": 125,
+      "token_sha256": "11f6120cab5b49470746f2d50d383bc72059f7ad86c1a37f814a9b0a2e8173b2"
+    },
+    {
+      "file": "src/nodes/float32_arithmetic.cc",
+      "tokens_and_literals_identical": true,
+      "baseline_matches_measured_source_sha256": true,
+      "token_count": 211,
+      "token_sha256": "9a827ad5d8d1c606d061daa992a4e8b3ba13c388810b956eb39b81b6cf3be6a0"
+    },
+    {
+      "file": "src/nodes/float32_unrolled.cc",
+      "tokens_and_literals_identical": true,
+      "baseline_matches_measured_source_sha256": true,
+      "token_count": 196,
+      "token_sha256": "57902e89b7dbc6c34bdb1e336cdd6045ea2cca3d6f64266b24d95d6ddeb123ec"
+    },
+    {
+      "file": "src/nodes/linear.cc",
+      "tokens_and_literals_identical": true,
+      "baseline_matches_measured_source_sha256": true,
+      "token_count": 93,
+      "token_sha256": "bad2c0af729e938e6bf281091201edda12d29f5ca4545679dc2e489ebdd22c3b"
+    },
+    {
+      "file": "src/nodes/tree.cc",
+      "tokens_and_literals_identical": true,
+      "baseline_matches_measured_source_sha256": true,
+      "token_count": 64,
+      "token_sha256": "56d6313641bfc263e6edc60c8b030d2a8ff9fd5e7ec00e902ba6c3afbf2e74e1"
+    },
+    {
+      "file": "src/nodes/unrolled.cc",
+      "tokens_and_literals_identical": true,
+      "baseline_matches_measured_source_sha256": true,
+      "token_count": 199,
+      "token_sha256": "b65678b2581277f30dc56380138d36a2ba7370e9168e22553f401c82b1ddd36c"
+    }
+  ]
+}

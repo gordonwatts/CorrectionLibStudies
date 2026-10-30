@@ -193,3 +193,22 @@ main tracks origin/main. Verified initial remote HEAD equals local commit
 f01dece57bbd73d7aebdc3e981cb950333c51a29, with a clean working tree. This final
 log update is committed and pushed as a follow-up. Repository remains private;
 no pull request was needed for publishing a new independent repository.
+
+2026-10-29 — explanatory comments for axis lookups
+User requested English explanations in most node axis searches. Added comments
+to all seven node sources and shared src/table.h: lower-edge conventions,
+binary and linear searches, padded-tree jumps, the five unrolled steps,
+arithmetic eligibility/guards/exact-edge repair, float32 threshold rounding,
+flow handling, and 2D content indexing. No executable statements were edited.
+Next: compare C++ tokens and literals against HEAD, verify the measured source
+matches that baseline and binaries are unchanged, then commit and push. Keep
+the original timing/provenance files intact; a comment pass is not a new run.
+
+Verification passed for all eight C++ files: executable tokens and string
+literals are identical to commit 581cf31377a2a1a38bb3e694520905837d6bd3aa.
+That baseline matches the original measured source hashes, and all binary
+hashes remain unchanged. Saved review/axis-comments-check.json and linked it
+from README so the historical byte hashes are not mistaken for hashes of the
+new comments. No rebuild, test rerun, or timing rerun is needed for this purely
+explanatory change. Corrected wording to distinguish the tree's power-of-two
+search size from the extra padding reserved for the unrolled implementation.
