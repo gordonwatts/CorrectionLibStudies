@@ -166,3 +166,24 @@ virtualenv and pinned fork source. Read README's fresh-checkout guidance before
 rerunning, since build/test log filenames are shared. No GitHub repository or PR
 was created; this is the requested independent LOCAL Git repository. Prepared
 the final local commit using the user's existing Windows Git author identity.
+
+2026-10-29 follow-up — batching clarification
+User asked whether CorrectionLib can batch. Rechecked the pinned fork's
+src/python.cc: evalv accepts arrays, allocates the output once, releases the
+Python GIL, and loops in C++, calling scalar c.evaluate(inputs) for each item.
+Our array workloads DO use that path; there is no Python loop over items.
+PluginNode::evaluate accepts one item's arguments and returns one double, so
+the plugin itself receives no batch. The 16-output workload makes 16 independent
+array calls. A batch callback plus evaluator dispatch would require extending
+the fork; this is possible, but absent from the pinned SDK. No code or timing
+changes were needed for this clarification.
+
+2026-10-29 — requested GitHub publication
+User explicitly requested pushing this repository to GitHub as
+CorrectionLibStudies. Confirmed GitHub account gordonwatts. Neither Windows nor
+atlas_al9 has the gh CLI; the connector has no repository-creation action.
+Used Windows Git's configured credential manager and GitHub's API without
+printing or saving the credential. Created the empty PRIVATE repository
+https://github.com/gordonwatts/CorrectionLibStudies (visibility was unspecified).
+Next: commit the batching clarification and this publication log, add origin,
+push main normally, and verify that the remote hash matches the local commit.
