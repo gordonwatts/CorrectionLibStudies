@@ -187,3 +187,9 @@ printing or saving the credential. Created the empty PRIVATE repository
 https://github.com/gordonwatts/CorrectionLibStudies (visibility was unspecified).
 Next: commit the batching clarification and this publication log, add origin,
 push main normally, and verify that the remote hash matches the local commit.
+
+Publication succeeded. origin points to the requested GitHub repository and
+main tracks origin/main. Verified initial remote HEAD equals local commit
+f01dece57bbd73d7aebdc3e981cb950333c51a29, with a clean working tree. This final
+log update is committed and pushed as a follow-up. Repository remains private;
+no pull request was needed for publishing a new independent repository.
