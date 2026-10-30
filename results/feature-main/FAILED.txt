@@ -1,0 +1,6 @@
+Campaign feature-main failed during checkpoint output after completing fixed64
+and uneven64: OSError22 Invalid argument opening raw.json for write on /mnt/c.
+No numeric mismatch preceded it. Partial files are not accepted evidence.
+Retry records all checkpoints on the Linux build filesystem and copies final
+files once. Accepted retry label will be feature-main-2. Re-record provenance
+because benchmark recording code changed; no provider/kernel change.

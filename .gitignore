@@ -1,4 +1,6 @@
 .venv/
+.venv-feature/
+dist-feature/
 .build/
 _deps/
 dist/

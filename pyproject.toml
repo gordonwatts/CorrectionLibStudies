@@ -8,7 +8,7 @@ version = "0.1.0"
 description = "Matched histogram lookup nodes for the CorrectionLib plugin SDK"
 requires-python = ">=3.9"
 dependencies = [
-  "correctionlib @ git+https://github.com/gordonwatts/correctionlib.git@8dc0b7a8bfe82c15115ff2a5907d4bfa35ee4710",
+  "correctionlib @ git+https://github.com/gordonwatts/correctionlib.git@3e907fd9eb4fe1d5946dcd161c68b2fdd2b341a5",
   "numpy>=1.24",
 ]
 
@@ -23,6 +23,20 @@ test = ["pytest>=7"]
 "study.hist.arithmetic" = "histogram_nodes:provider"
 "study.hist.float32_unrolled" = "histogram_nodes:provider"
 "study.hist.float32_arithmetic" = "histogram_nodes:provider"
+"study.hist.binary_batch" = "histogram_nodes:provider"
+"study.hist.linear_batch" = "histogram_nodes:provider"
+"study.hist.tree_batch" = "histogram_nodes:provider"
+"study.hist.unrolled_batch" = "histogram_nodes:provider"
+"study.hist.arithmetic_batch" = "histogram_nodes:provider"
+"study.hist.float32_unrolled_batch" = "histogram_nodes:provider"
+"study.hist.float32_arithmetic_batch" = "histogram_nodes:provider"
+"study.hist.binary_packed" = "histogram_nodes:provider"
+"study.hist.linear_packed" = "histogram_nodes:provider"
+"study.hist.tree_packed" = "histogram_nodes:provider"
+"study.hist.unrolled_packed" = "histogram_nodes:provider"
+"study.hist.arithmetic_packed" = "histogram_nodes:provider"
+"study.hist.float32_unrolled_packed" = "histogram_nodes:provider"
+"study.hist.float32_arithmetic_packed" = "histogram_nodes:provider"
 
 [tool.scikit-build]
 wheel.packages = ["python/histogram_nodes"]

@@ -1,5 +1,14 @@
 # Working on this study
 
+The 2026-10-30 user-authorized feature extension uses develop commit
+`3e907fd9eb4fe1d5946dcd161c68b2fdd2b341a5` and SDK API4. Build it with
+`scripts/bootstrap-feature.sh` and keep its evidence under `results/feature-*`.
+Scalar, native-batch and explicitly packed array-output providers are separate
+comparisons. Keep the scalar tests and historical evidence. The PR1 pin and
+single-double restrictions below describe the historical baseline, reproduced
+from study commit `9ae3d72`, rather than the new API4 extension. Do not infer
+SIMD or reuse across independent corrections from native batching alone.
+
 This is a new, independent Git repository for histogram lookup nodes loaded by
 the experimental native plugin SDK in gordonwatts/correctionlib PR #1.
 

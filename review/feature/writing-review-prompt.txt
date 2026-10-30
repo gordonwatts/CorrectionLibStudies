@@ -1,0 +1,20 @@
+Review the README for a particle physicist who understands histograms and
+CorrectionLib payloads but need not know C++ dispatch/ABI details. You have a
+fresh context; do not request earlier chat history. Read these absolute paths:
+C:/Users/gwatts/Code/atlas/CorrectionLibStudies/README.md
+C:/Users/gwatts/Code/atlas/CorrectionLibStudies/README-scalar.md
+Source: src/table.h, src/table.cc, src/registry.cc, src/nodes/*.cc,
+src/batch_probe.cc, python/histogram_nodes/feature_workloads.py,
+python/histogram_nodes/workloads.py, scripts/benchmark-feature.py,
+scripts/bootstrap-feature.sh, tests/test_batches.py, tests/test_nodes.py.
+Evidence: results/feature-main-2/{summary.json,raw.json,metadata.json,validation.json},
+results/feature-build/provenance.json, results/feature-tests.log,
+results/feature-sanitizer.log, review/feature/documentation-usability.md.
+All paths are under the study root above. Do a writing/evidence review only;
+no code or document edits, builds or new timings. Check numerical claims against
+retained evidence, clarity of one point vs batch vs packed components,
+precision/float32, native vs Python timing scopes, historical reproducibility,
+synthetic scope, and whether links/documentation are sufficient to continue.
+Report concrete corrections with paths and paragraphs, prioritizing substantive
+errors over style preferences. You may read files using PowerShell. Return a
+concise review to the requesting agent; they will retain it in review/feature/.

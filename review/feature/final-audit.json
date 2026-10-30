@@ -1,0 +1,11 @@
+{
+  "source_sha256_matched": 34,
+  "binary_sha256_matched": 7,
+  "provenance_sha256": "8518c50fb3b3077867cba6e321938dd10755960ab3716caa45826958827a87e7",
+  "timing_medians_reproduced": 4636,
+  "raw_round_records": 37088,
+  "shell_scripts_parse": true,
+  "historical_tests_scripts_evidence_unchanged": true,
+  "README_relative_links_resolve": true,
+  "tested_core_pin": "3e907fd9eb4fe1d5946dcd161c68b2fdd2b341a5"
+}
