@@ -278,3 +278,13 @@ and objects; approved escalation succeeded. Staged progress via a separate
 index blob containing only this feature's new entries; pre-existing57-line
 progress addition and handoff/ remain unstaged. Required fresh-context reviewer
 found no substantive error and verified all quoted metrics. Ready to commit.
+
+2026-10-30 — feature publication complete
+Committed implementation/evidence as1d71fe4aa5b10c3539bb76036584ba573cb5409b
+on codex/native-batch-lookups; pushed and verified matching remote branch SHA.
+Created open review PR https://github.com/gordonwatts/CorrectionLibStudies/pull/1
+against main. Nothing merged. Required fresh-context writing review and complete
+accepted results are committed. Pre-existing progress additions and handoff/
+remain unstaged and uncommitted. Future work should start from README.md;
+results/feature-main-2 is accepted, feature-main is failed partial evidence.
+No implementation work remains for this request; review the PR before merging.
