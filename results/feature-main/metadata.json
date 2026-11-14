@@ -1,0 +1,39 @@
+{
+  "core_sha": "3e907fd9eb4fe1d5946dcd161c68b2fdd2b341a5",
+  "seed": 20261029,
+  "cpu_affinity": [
+    0
+  ],
+  "retained_rounds": 7,
+  "warm_rounds": 1,
+  "target_round_ms": 2,
+  "sizes": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    1000,
+    10000,
+    100000
+  ],
+  "python_operation": "evaluate then multiply x; independent16 stacks results to dense (N,S)",
+  "kernel_operation": "public C++ evaluate_batch[_array], preallocated output; no Python conversion, allocation or rescaling",
+  "thread_limits": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "provenance_sha256": "825e75ad9120dfe6f748197c92e72a053d457cb2e42e29abba81f5aa2d60699f"
+}

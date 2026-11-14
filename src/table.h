@@ -21,6 +21,7 @@ struct ParsedTable {
   std::vector<double> content;
   int flow = 0; // 0 clamp, 1 numeric fallback, 2 error
   double fallback = 0;
+  size_t components = 1;
 };
 ParsedTable parse(const PluginConfig&, const PluginContext&);
 
@@ -94,14 +95,15 @@ template<class T> struct Axis {
 
 // Policy is defined separately in each node source; shared code fixes all other
 // numerical choices, flow handling, and row-major content indexing.
-template<class Policy, class T=double> class Histogram final : public PluginNode {
+template<class Policy, class T=double, bool Batch=false, bool Packed=false> class Histogram final : public PluginNode {
   std::vector<size_t> inputs_;
   std::vector<Axis<T>> axes_;
   std::vector<T> content_;
   int flow_;
   T fallback_;
+  size_t components_;
 public:
-  explicit Histogram(const ParsedTable& p) : inputs_(p.inputs), flow_(p.flow), fallback_(narrow<T>(p.fallback)) {
+  explicit Histogram(const ParsedTable& p) : inputs_(p.inputs), flow_(p.flow), fallback_(narrow<T>(p.fallback)), components_(p.components) {
     for (const auto& edges : p.edges) axes_.emplace_back(edges);
     for (double v : p.content) {
       T converted=narrow<T>(v);
@@ -110,7 +112,64 @@ public:
     }
     if (!std::isfinite(fallback_)) throw std::runtime_error("fallback not finite in selected precision");
   }
+  size_t output_size() const override { return Packed ? components_ : 0; }
+  // A fixed array is an explicit payload choice, not several scalar queries.
+  void evaluate_array(const std::vector<Variable::Type>& values, double* out, size_t) const override {
+    if constexpr (!Packed) throw std::runtime_error("scalar histogram has no array output");
+    size_t flat=0;
+    for (size_t d=0; d<axes_.size(); ++d) {
+      T x=narrow<T>(std::get<double>(values.at(inputs_[d])));
+      const auto& a=axes_[d];
+      if (x<a.edges.front() || !(x<a.edges.back())) {
+        if (flow_==1) { std::fill_n(out,components_,static_cast<double>(fallback_)); return; }
+        if (flow_==2) throw std::runtime_error("coordinate outside histogram");
+      }
+      flat=flat*a.n+Policy::find(a,x);
+    }
+    for (size_t s=0; s<components_; ++s) out[s]=static_cast<double>(content_[flat*components_+s]);
+  }
+  void evaluate_batch(const std::vector<correction::BatchInput>& values, size_t n, double* out, size_t capacity) const override {
+    if constexpr (Batch && !Packed) batch(values,n,out);
+    else PluginNode::evaluate_batch(values,n,out,capacity);
+  }
+  void evaluate_batch_array(const std::vector<correction::BatchInput>& values, size_t n, double* out, size_t capacity) const override {
+    if constexpr (Packed) batch(values,n,out);
+    else PluginNode::evaluate_batch_array(values,n,out,capacity);
+  }
+private:
+  // Resolve dimension count and column references once per callback. Public SDK
+  // at(row) reads scalar broadcasts and signed strides; no private pointer API.
+  void batch(const std::vector<correction::BatchInput>& values, size_t n, double* out) const {
+    const auto& xcol=values.at(inputs_[0]);
+    const auto& ax=axes_[0];
+    if (axes_.size()==1) {
+      for (size_t row=0; row<n; ++row) {
+        T x=narrow<T>(std::get<double>(xcol.at(row)));
+        write(out+row*components_, ax, x, nullptr, T(0));
+      }
+    } else {
+      const auto& ycol=values.at(inputs_[1]);
+      const auto& ay=axes_[1];
+      for (size_t row=0; row<n; ++row) {
+        T x=narrow<T>(std::get<double>(xcol.at(row)));
+        T y=narrow<T>(std::get<double>(ycol.at(row)));
+        write(out+row*components_, ax, x, &ay, y);
+      }
+    }
+  }
+  void write(double* out, const Axis<T>& ax, T x, const Axis<T>* ay, T y) const {
+    bool outside=x<ax.edges.front() || !(x<ax.edges.back());
+    if (ay) outside |= y<ay->edges.front() || !(y<ay->edges.back());
+    if (outside && flow_==1) { std::fill_n(out,components_,static_cast<double>(fallback_)); return; }
+    if (outside && flow_==2) throw std::runtime_error("coordinate outside histogram");
+    size_t flat=Policy::find(ax,x);
+    if (ay) flat=flat*ay->n+Policy::find(*ay,y);
+    // Only the explicitly packed provider reuses a search across components.
+    for (size_t s=0; s<components_; ++s) out[s]=static_cast<double>(content_[flat*components_+s]);
+  }
+public:
   double evaluate(const std::vector<Variable::Type>& values) const override {
+    if constexpr (Packed) throw std::runtime_error("array histogram requires array evaluation");
     size_t flat=0;
     for (size_t d=0; d<axes_.size(); ++d) {
       // The SDK passes doubles. Float32 nodes round each coordinate here,
@@ -133,7 +192,16 @@ public:
 
 template<class Policy, class T=double> void add(PluginRegistry& registry, const char* type) {
   registry.register_node(type,1,[](const PluginConfig& config, const PluginContext& ctx) {
+    if (ctx.output_size()) throw std::runtime_error("scalar histogram requires scalar output");
     return std::make_shared<Histogram<Policy,T>>(parse(config,ctx));
+  });
+  registry.register_node(std::string(type)+"_batch",1,[](const PluginConfig& config, const PluginContext& ctx) {
+    if (ctx.output_size()) throw std::runtime_error("batch histogram requires scalar output");
+    return std::make_shared<Histogram<Policy,T,true>>(parse(config,ctx));
+  });
+  registry.register_node(std::string(type)+"_packed",1,[](const PluginConfig& config, const PluginContext& ctx) {
+    if (!ctx.output_size()) throw std::runtime_error("packed histogram requires array output");
+    return std::make_shared<Histogram<Policy,T,true,true>>(parse(config,ctx));
   });
 }
 void register_binary(PluginRegistry&);

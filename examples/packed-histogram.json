@@ -1,0 +1,16 @@
+{
+  "schema_version": 3,
+  "corrections": [{
+    "name": "three_factors", "version": 1,
+    "inputs": [{"name": "x", "type": "real"}],
+    "output": {"name": "factors", "type": "real", "shape": [3]},
+    "data": {
+      "nodetype": "extension", "type": "study.hist.unrolled_packed", "version": 1,
+      "output_shape": [3], "children": [],
+      "config": {
+        "inputs": ["x"], "edges": [[0.0, 1.0, 2.0]],
+        "content": [1.0, 1.1, 1.2, 2.0, 2.1, 2.2], "flow": "clamp"
+      }
+    }
+  }]
+}

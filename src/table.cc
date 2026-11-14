@@ -17,6 +17,7 @@ ParsedTable parse(const PluginConfig& config, const PluginContext& ctx) {
   if (!inputs.IsArray() || inputs.Empty() || inputs.Size()>2 || !edges.IsArray() || edges.Size()!=inputs.Size())
     throw std::runtime_error("one or two named axes required");
   ParsedTable p;
+  p.components=std::max(size_t(1),ctx.output_size());
   std::set<std::string> names;
   size_t bins=1;
   for (size_t d=0; d<inputs.Size(); ++d) {
@@ -36,7 +37,9 @@ ParsedTable parse(const PluginConfig& config, const PluginContext& ctx) {
     bins*=a.size()-1;
     p.edges.push_back(std::move(a));
   }
-  if (!content.IsArray() || content.Size()!=bins) throw std::runtime_error("content shape mismatch");
+  if (p.components>1048576 || bins>1048576/p.components)
+    throw std::runtime_error("table exceeds 1048576 stored components");
+  if (!content.IsArray() || content.Size()!=bins*p.components) throw std::runtime_error("content shape mismatch");
   for (const auto& v : content.GetArray()) {
     if (!v.IsNumber() || !std::isfinite(v.GetDouble())) throw std::runtime_error("finite numeric contents required");
     p.content.push_back(v.GetDouble());

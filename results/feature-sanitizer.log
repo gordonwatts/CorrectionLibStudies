@@ -1,0 +1,52 @@
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /cvmfs/sft.cern.ch/lcg/releases/gcc/15.2.0-35657/x86_64-el9/bin/g++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+CMake Warning (dev) at .venv-feature/lib/python3.13/site-packages/pybind11/share/cmake/pybind11/FindPythonLibsNew.cmake:101 (message):
+  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+  the cmake_policy command to set the policy and suppress this warning, or
+  preferably upgrade to using FindPython, either by calling it explicitly
+  before pybind11, or by setting PYBIND11_FINDPYTHON ON before pybind11.
+Call Stack (most recent call first):
+  .venv-feature/lib/python3.13/site-packages/pybind11/share/cmake/pybind11/pybind11Tools.cmake:44 (find_package)
+  .venv-feature/lib/python3.13/site-packages/pybind11/share/cmake/pybind11/pybind11Common.cmake:243 (include)
+  .venv-feature/lib/python3.13/site-packages/pybind11/share/cmake/pybind11/pybind11Config.cmake:257 (include)
+  CMakeLists.txt:5 (find_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Found PythonInterp: /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/.venv-feature/bin/python (found suitable version "3.13.11", minimum required is "3.9")
+-- Found PythonLibs: /cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.100/InstallArea/x86_64-el9-gcc15-opt/lib/libpython3.13.so
+-- Performing Test HAS_FLTO_AUTO
+-- Performing Test HAS_FLTO_AUTO - Success
+-- Found pybind11: /mnt/c/Users/gwatts/Code/atlas/CorrectionLibStudies/.venv-feature/lib/python3.13/site-packages/pybind11/include (found version "3.1.0")
+-- Configuring done (1.5s)
+-- Generating done (0.1s)
+-- Build files have been written to: /tmp/correctionlib-batch-study-1000/sanitized
+[ 14%] Building CXX object CMakeFiles/_json_numbers.dir/src/json_numbers.cc.o
+[ 14%] Building CXX object CMakeFiles/_batch_probe.dir/src/batch_probe.cc.o
+[ 21%] Linking CXX shared module _json_numbers.cpython-313-x86_64-linux-gnu.so
+[ 21%] Built target _json_numbers
+[ 28%] Building CXX object CMakeFiles/histogram_nodes.dir/src/registry.cc.o
+[ 35%] Linking CXX shared module _batch_probe.cpython-313-x86_64-linux-gnu.so
+[ 42%] Building CXX object CMakeFiles/histogram_nodes.dir/src/table.cc.o
+[ 42%] Built target _batch_probe
+[ 50%] Building CXX object CMakeFiles/histogram_nodes.dir/src/nodes/arithmetic.cc.o
+[ 57%] Building CXX object CMakeFiles/histogram_nodes.dir/src/nodes/binary.cc.o
+[ 64%] Building CXX object CMakeFiles/histogram_nodes.dir/src/nodes/float32_arithmetic.cc.o
+[ 71%] Building CXX object CMakeFiles/histogram_nodes.dir/src/nodes/float32_unrolled.cc.o
+[ 78%] Building CXX object CMakeFiles/histogram_nodes.dir/src/nodes/linear.cc.o
+[ 85%] Building CXX object CMakeFiles/histogram_nodes.dir/src/nodes/tree.cc.o
+[ 92%] Building CXX object CMakeFiles/histogram_nodes.dir/src/nodes/unrolled.cc.o
+[100%] Linking CXX shared library libhistogram_nodes.so
+[100%] Built target histogram_nodes
+........................................................................ [ 14%]
+........................................................................ [ 28%]
+........................................................................ [ 42%]
+........................................................................ [ 57%]
+........................................................................ [ 71%]
+........................................................................ [ 85%]
+.......................................................................  [100%]
+503 passed in 3.11s

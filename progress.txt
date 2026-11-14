@@ -212,3 +212,79 @@ from README so the historical byte hashes are not mistaken for hashes of the
 new comments. No rebuild, test rerun, or timing rerun is needed for this purely
 explanatory change. Corrected wording to distinguish the tree's power-of-two
 search size from the extra padding reserved for the unrolled implementation.
+
+2026-10-30 — native batches and fixed arrays, new user-authorized study
+The newer user request supersedes the historical scalar-SDK pin only for this
+feature campaign. Preserve all scalar tests and results/main/build evidence.
+Read the three public feature guides before headers/source. develop remote and
+clean /home/gwatts/atlas/correctionlib_features both resolve to exact commit
+3e907fd9eb4fe1d5946dcd161c68b2fdd2b341a5. Branch codex/native-batch-lookups.
+Docs explain Python dispatch, root-only fast paths, strides/ownership, API4,
+shape[N,S] and no automatic cross-output sharing. Missing discovery details:
+no complete combined custom-provider example; no explicit note that BatchInput
+has no typed raw-column accessor. Header confirms at(row) is the only public
+reader; do not reach into private storage. Proposed implementations hoist axis
+handling and use shared searches only for explicitly declared packed outputs.
+Use separate feature virtualenv/build/results, retain old binaries/evidence.
+Initial sandbox WSL call failed E_ACCESSDENIED; approved WSL call worked.
+Prior dirty progress.txt and untracked handoff/ are pre-existing; exclude them
+from feature commit. Keep this appended log recoverable even if left unstaged.
+Implementation checkpoint:
+Added API4 registration, separate _batch/_packed providers for all seven policies,
+shared per-row flow/indexing, fixed packed shape and bin-major content. Scalar
+node evaluate implementations and all original tests remain. Added tests for
+boundary/invalid/flow/empty/broadcast/thread behavior, native signed/zero strides,
+output capacity/canaries/null, and provider lifetime beyond registry/CorrectionSet.
+The kernel adapter times public C++ dispatch using preallocated storage; Python
+measurements separately include evaluate, rescale, and dense stacking for the
+independent16 comparison. Generic BatchInput::at remains the public reader.
+Feature bootstrap first failed because _deps/wheels absent; retry uses existing
+feature-build/wheels read-only. Core rebuilding with matched GCC15.2 O3/native/
+ffp-contract=off; outputs isolated in /tmp/correctionlib-batch-study-1000 and
+.venv-feature, leaving historical build/install untouched. No timings yet.
+Feature correctness accepted:503 passed (319 original,184 new); provider-only
+UB/float-cast-overflow sanitizer:503 passed, no diagnostics. Examples and pip
+check pass. Initial14 failures were tests expecting RuntimeError rather than
+ValueError from C++ invalid_argument, corrected without weakening checks.
+First timing attempt feature-main failed in filesystem checkpointing, after two
+fixtures, with OSError22 Invalid argument on /mnt/c raw.json open-for-write.
+Keep results/feature-main as FAILED partial evidence and failure log. Source
+recording now checkpoints on Linux and copies final files once; rerun full
+campaign under feature-main-2 with freshly recorded provenance. No numerical
+implementation changes and no acceptance of partial timing numbers.
+Accepted campaign feature-main-2 completed after moving recording checkpoints
+to Linux:4636 rows,37088 round records (4636 warm,32452 retained),467660288
+exact before/after comparisons;112.6903s. At fixed20x20/100k, Python unrolled
+scalar fallback1471.848us vs native batch1050.543us (1.40x); independent16
+native batch22721.628us vs explicit packed16=2590.936us (8.77x, includes
+allocation/stacking differences). Kernel scope1334.081us vs960.637us; packed16
+1095.471us is a different output workload, not a native independent16 ratio.
+Arithmetic/float32 do not consistently beat double unrolled. No SIMD claim.
+All34 recorded source hashes+7 binary hashes match accepted provenance SHA
+8518c50fb3b3077867cba6e321938dd10755960ab3716caa45826958827a87e7.
+All4636 medians independently reproduced, README links resolve, all shell
+scripts parse, original tests/scalar scripts/results/main+build unchanged.
+Required separate clean-context gpt-6.1-sol/high writing review completed:
+no substantive errors; applied optional S definition and warm/retained counts.
+Prompt/review/final audit retained under review/feature. Parent also pushed
+core doc-only clarification3dcfa20e (public at(row) reader and existing complete
+array-provider link); tested core remains exact3e907fd9 and no provenance was
+regenerated after the doc-only followup. Current feature source checkout is
+now newer docs only; fresh bootstrap must obtain exact tested pin.
+Next: stage feature changes plus only these new log entries, preserve prior
+unstaged progress/handoff, commit, push feature branch and create review PR.
+Publication preparation:initial sandbox Git staging failed writing .git/index.lock
+and objects; approved escalation succeeded. Staged progress via a separate
+index blob containing only this feature's new entries; pre-existing57-line
+progress addition and handoff/ remain unstaged. Required fresh-context reviewer
+found no substantive error and verified all quoted metrics. Ready to commit.
+
+2026-10-30 — feature publication complete
+Committed implementation/evidence as1d71fe4aa5b10c3539bb76036584ba573cb5409b
+on codex/native-batch-lookups; pushed and verified matching remote branch SHA.
+Created open review PR https://github.com/gordonwatts/CorrectionLibStudies/pull/1
+against main. Nothing merged. Required fresh-context writing review and complete
+accepted results are committed. Pre-existing progress additions and handoff/
+remain unstaged and uncommitted. Future work should start from README.md;
+results/feature-main-2 is accepted, feature-main is failed partial evidence.
+No implementation work remains for this request; review the PR before merging.
